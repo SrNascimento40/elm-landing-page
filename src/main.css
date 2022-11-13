@@ -9,18 +9,215 @@
   height: inherit;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
 body {
   font-family: 'Source Sans Pro', 'Trebuchet MS', 'Lucida Grande', 'Bitstream Vera Sans', 'Helvetica Neue', sans-serif;
-  margin: 0;
-  text-align: center;
-  color: #293c4b;
+  background: linear-gradient(rgba(0, 0, 0, 1.0), rgba(0, 200, 50, 0.90)), url(../public/selecabg.jpg);
+  background-size: cover;
 }
 
-h1 {
-  font-size: 30px;
+.brazilColorDeg {
+  color: green;
 }
 
-img {
-  margin: 20px 0;
-  max-width: 200px;
+header {
+  display: flex;
+  padding: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  height: 15vh;
+}
+
+.links:after {
+	content: '';
+	display: block;
+	margin: auto;
+	height: 0.125rem;
+	width: 0px;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease;
+}
+.links:hover:after {
+	width: 100%;
+	background: #FFF;
+}
+
+#logo {
+  max-width: 3rem;
+  filter: brightness(1.2);
+  cursor: pointer;
+}
+
+#logo:hover {
+  filter: brightness(1.75) drop-shadow(0.125rem 0.5rem 0.25rem black);
+}
+
+#navLinks {
+  display: flex;
+  gap: 4.5rem;
+}
+
+.links {
+  font-size: 1.125rem;
+  color: #FFF;
+  font-weight: 900;
+}
+
+#mainDiv {
+  display: flex;
+  flex-direction: row;
+  height: 85vh;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#mainText {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 3rem;
+}
+
+#mainImg {
+  max-height: 40vw;
+}
+
+#titulo {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+#informativo {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: rgb(210, 210, 210);
+}
+
+#button {
+  position: relative;
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  margin: 40px 0;
+  color: #FDCB00;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  overflow: hidden;
+  margin-right: 50px;
+
+}
+
+#button:hover {
+  background: #FDCB00;
+  color: #050801;
+  box-shadow: 0 0 5px #FDCB00,
+    0 0 25px #FDCB00,
+    0 0 50px #FDCB00,
+    0 0 200px #FDCB00;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+#button:nth-child(1) {
+  filter: hue-rotate(270deg);
+}
+
+#button:nth-child(2) {
+  filter: hue-rotate(110deg);
+}
+
+#button span {
+  position: absolute;
+  display: block;
+}
+
+#button span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #FDCB00);
+  animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+#button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #FDCB00);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+#button span:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #FDCB00);
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.50s;
+}
+
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+
+#button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #FDCB00);
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+
+  50%,
+  100% {
+    bottom: 100%;
+  }
 }
