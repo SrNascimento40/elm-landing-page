@@ -23,10 +23,6 @@ body {
   background-size: cover;
 }
 
-.brazilColorDeg {
-  color: green;
-}
-
 header {
   display: flex;
   padding: 1.5rem;
@@ -36,17 +32,18 @@ header {
 }
 
 .links:after {
-	content: '';
-	display: block;
-	margin: auto;
-	height: 0.125rem;
-	width: 0px;
-	background: transparent;
-	transition: width .5s ease, background-color .5s ease;
+  content: '';
+  display: block;
+  margin: auto;
+  height: 0.125rem;
+  width: 0px;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
 }
+
 .links:hover:after {
-	width: 100%;
-	background: #FFF;
+  width: 100%;
+  background: #c3ffd2;
 }
 
 #logo {
@@ -56,7 +53,7 @@ header {
 }
 
 #logo:hover {
-  filter: brightness(1.75) drop-shadow(0.125rem 0.5rem 0.25rem black);
+  filter: brightness(1.75) drop-shadow(0.125rem 0.5rem 0.25rem #000);
 }
 
 #navLinks {
@@ -66,7 +63,7 @@ header {
 
 .links {
   font-size: 1.125rem;
-  color: #FFF;
+  color: #c3ffd2;
   font-weight: 900;
 }
 
@@ -92,12 +89,13 @@ header {
 #titulo {
   font-size: 2rem;
   font-weight: 900;
+  color: rgba(255, 210, 0, 1)
 }
 
 #informativo {
   font-size: 0.75rem;
   font-weight: 400;
-  color: rgb(210, 210, 210);
+  color: #FFDE4D;
 }
 
 #button {
@@ -220,4 +218,31 @@ header {
   100% {
     bottom: 100%;
   }
+}
+
+#tickets {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  border-radius: 500px;
+  transition-property: background-color, border-color, color, box-shadow, filter;
+  transition-duration: .3s;
+  border: 1px solid transparent;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  white-space: normal;
+  font-weight: 700;
+  text-align: center;
+  padding: 17px 48px;
+  color: #fff;
+  background-color: #259B2A;
+  height: 48px;
+  width: 90%;
+}
+
+#tickets:hover {
+  transform: scale(1.04);
+  filter: brightness(1.2);
 }
